@@ -1,4 +1,6 @@
-
+from random import randint
+x = randint(0, 100)
+print(x)
 #
 n = 5.96
 print(n)
