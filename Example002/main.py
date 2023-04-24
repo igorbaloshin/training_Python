@@ -25,9 +25,15 @@ for i in range(5):# цикл выполнится 5 раз
 # 5-я итерация цикла(повторение 5): n = 0, list_1 = [12, 7, -1, 21, 0]
 print(*list_1) # [12, 7, -1, 21, 0]
 
+string = 'assdfgg'
+print(string)
+array = list(string) #преобразуем строку в список
+print(array)
+
 list_1 = [12, 7, -1, 21, 0]
 for i in list_1:
-    print(i) # вывод каждого элемента списка
+    print(i, end=" ") # вывод каждого элемента списка в одну строку
+print()   
 # 1-я итерация цикла(повторение 1): i = 12
 # 2-я итерация цикла(повторение 2): i = 7
 # 3-я итерация цикла(повторение 3): i = -1
@@ -147,7 +153,7 @@ print(b) # frozenset({1, 2, 3, 5, 8})
 #list_1 = [exp for item in iterable (if conditional)]
 
 list_1 = []
-for i in range(1, 101):
+for i in range(1, 11):
     list_1.append(i)
 print(list_1) # [1, 2, 3,..., 100]
 
