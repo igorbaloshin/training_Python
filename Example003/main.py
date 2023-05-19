@@ -4,20 +4,32 @@
 # body line n
 # optional return
 
-import modul as m  # замена имени модуля
-from modul import *  # импорт всех функций
-from modul import f
+
 import modul
+from modul import f
+from modul import *  # импорт всех функций
+import modul as m  # замена имени модуля
+
+
+def sumNumbers(n): # Аналог "void"  без вывода данных
+    summa = 0
+    for i in range(1, n + 1):
+        summa += i
+    print(summa)
+        
+n = int(input("Введите число :"))  # 5
+sumNumbers(n)  # 15
 
 
 def sumNumbers(n):
     summa = 0
+    
     for i in range(1, n + 1):
         summa += i
     return (summa)
 
 
-n = int(input())  # 5
+n = int(input("Введите число :"))  # 5
 print(sumNumbers(n))  # 15
 
 
