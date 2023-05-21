@@ -42,6 +42,8 @@ calc(f, 4, 5) # 9
 calc(lambda x, y: x + y, 4, 5) # 9
 calc(lambda x, y: x * y, 4, 5) # 20
 
+print()
+
 # 1. В списке хранятся числа. Нужно выбрать только чётные числа и составить
 # список пар (число; квадрат числа).
 # Пример: 1 2 3 5 8 15 23 38
@@ -64,7 +66,7 @@ def where(f, col):
 
 data = [1, 2, 3, 5, 8, 15, 23, 38]
 res = select(int, data)
-print(res)
+print(res) # [1, 2, 3, 5, 8, 15, 23, 38]
 
 res = where(lambda x: x % 2 == 0, res)
 print(res) # [2, 8, 38]
@@ -73,13 +75,17 @@ print(res) # [2, 8, 38]
 res = list(select(lambda x: (x, x ** 2), res))
 print(res) # [(2, 4), (8, 64), (38, 1444)]
 
+print()
+
 # функция map (итератор)
 
 list_1 = [x for x in range (1,10)]
-print(list_1)
-list_1 = list(map(lambda x: x * 10, list_1 ))
-print(list_1)
+print(list_1) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+list_1 = list(map(lambda x: x * 10, list_1 ))
+print(list_1) # [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+print()
 #  Задача: C клавиатуры вводится некий набор чисел, в качестве разделителя
 # используется пробел. Этот набор чисел будет считан в качестве строки. Как
 # превратить list строк в list чисел?
@@ -101,6 +107,7 @@ res = where(lambda x: x % 2 == 0, res)
 res = list(map(lambda x: (x, x ** 2), res))
 print(res) # [(2, 4), (8, 64), (38, 1444)]
 print()
+
 #  функция filter
 
 data = '1 2 3 5 8 15 23 38'.split()
@@ -117,6 +124,8 @@ print(res)
 data = [x for x in range(10)]
 res = list(filter(lambda x: x % 2 == 0, data))
 print(res) # [0, 2, 4, 6, 8]
+
+print()
 
 
 # функция zip
